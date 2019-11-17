@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+@model List<string>
+
+<html>
+<body>
+    @using (Html.BeginForm())
+    {
+        <select name="name">
+            @foreach (var x in Model)
+            {
+                <option value="@x">@x</option>
+            }
+        </select>
+
+        <p>
+            <input formaction="/FillFields" type="submit" value="Create" />
+        </p>
+    }
+</body>
+</html>

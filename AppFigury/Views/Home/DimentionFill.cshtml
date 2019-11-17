@@ -1,0 +1,13 @@
+﻿@model Figure
+<!DOCTYPE html>
+<body>
+    @using (Html.BeginForm())
+    {
+        <a>@Model.Description </a>
+        @Html.HiddenFor(x => x.Name)
+        @Html.TextBoxFor(m => m.Fields, new { @class = "form-control" })
+        <p>
+            <input formaction="/CalculateField" type="submit" value="Create" />
+        </p>
+    }
+</body>
